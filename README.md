@@ -18,30 +18,35 @@ It combines:
 
 ---
 
-## 🛠️ Project Structure
+## Project Structure
 phishing-detection-project/
-│
-├── backend/
-│ ├── app.py
-│ ├── utils.py
-│ ├── phishing_model.pkl
-│ ├── scaler.pkl (optional)
-│ └── requirements.txt
-│
-├── frontend/
-│ ├── index.html
-│ ├── login.html
-│ ├── style.css
-│ ├── script.js
-│ └── SafeBrowse.png
-│
-├── ml_model/
-│ ├── train_model.py
-│ ├── train_custom.py
-│ └── dataset.csv
-│
-└── README.md
 
+|
+├── backend/
+|   ├── app.py
+|   ├── utils.py
+
+|   ├── phishing_model.pkl
+|   ├── scaler.pkl (optional)
+|   └── requirements.txt
+
+|
+├── frontend/
+|   ├── index.html
+|   ├── login.html
+
+|   ├── style.css
+|   ├── script.js
+|   └── SafeBrowse.png
+
+|
+├── ml_model/
+|   ├── train_model.py
+|   ├── train_custom.py
+
+|   └── dataset.csv
+|
+└── README.md
 
 ---
 
