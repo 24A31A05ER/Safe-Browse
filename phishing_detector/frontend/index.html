@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeBrowse - URL Security Scanner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="page-bg"></div>
+
+<header class="nav">
+  <div class="logo">
+    <span class="logo-icon">🛡️</span>
+    <span class="logo-text">SafeBrowse</span>
+  </div>
+
+  <nav>
+    <a id="historyLink" href="#" onclick="scrollToHistory()" style="display:none;">History</a>
+    <a id="authLink" href="login.html">Sign In / Register</a>
+    <a id="logoutLink" href="#" style="display:none;">Log out</a>
+  </nav>
+</header>
+
+<main class="app-container">
+
+<!-- SCANNER -->
+<section class="hero-card">
+  <div><img src="SafeBrowse.png" style="width: 200px;height: 200px;"></div>
+  <h1>Don't guess. Investigate.</h1>
+  <p class="hero-subtitle">Detect phishing, malware, and scam links instantly.</p>
+
+  <div class="scan-panel">
+    <input id="url" type="text" placeholder="https://example.com"/>
+    <button id="scanButton" onclick="checkURL()">Start Investigation</button>
+  </div>
+
+  <div id="status" class="status-box">
+    <p id="result">Enter a URL above and click Scan.</p>
+    <p id="desc"></p>
+    <button id="continueBtn" onclick="goToSite()" class="continue-btn">Continue</button>
+  </div>
+
+  <!-- ANALYSIS -->
+  <div id="analysisBox" class="analysis-box" style="display:none;">
+    <h3 id="trustScore"></h3>
+    <p id="siteDescription"></p>
+    <div id="featureList"></div>
+    <p id="securityWarning" class="warning-text"></p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="hero-card fade-in">
+  <h2>🚀 Features</h2>
+  <div class="feature-grid">
+    <div class="feature-card"><h3>🔍 Instant Scanning</h3><p>Analyze URLs instantly.</p></div>
+    <div class="feature-card"><h3>⚠️ Threat Detection</h3><p>Detect phishing links.</p></div>
+    <div class="feature-card"><h3>📜 History</h3><p>Track scanned URLs.</p></div>
+    <div class="feature-card"><h3>🔐 Safe Browsing</h3><p>Proceed only if safe.</p></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="hero-card fade-in">
+  <h2>⚙️ How It Works</h2>
+  <div class="steps">
+    <div class="step">1. Enter URL</div>
+    <div class="step">2. Scan</div>
+    <div class="step">3. Analyze</div>
+    <div class="step">4. Decide</div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="hero-card">
+  <h2>📘 How to Use</h2>
+
+  <ul class="info-list">
+    <li>Enter a URL</li>
+    <li>Click "Start Investigation"</li>
+    <li>Check SAFE or DANGEROUS result</li>
+    <li>Review analysis details</li>
+    <li>Proceed only if SAFE</li>
+  </ul>
+</section>
+
+<!-- SAFETY TIPS -->
+<section class="hero-card">
+  <h2>🛡️ Safety Tips</h2>
+
+  <ul class="info-list">
+    <li>Never enter passwords on unknown websites</li>
+    <li>Avoid suspicious links</li>
+    <li>Check HTTPS before login</li>
+    <li>Watch for strange URLs (@, -, etc.)</li>
+  </ul>
+</section>
+
+<!-- HISTORY -->
+<section id="historySection" class="history-card" style="display:none;">
+  <div class="history-header">
+    <h2>Scan History</h2>
+    <button id="clearHistoryBtn" onclick="clearAllHistory()" class="clear-btn">Clear All</button>
+  </div>
+  <ul id="history"></ul>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  © 2026 SafeBrowse
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
