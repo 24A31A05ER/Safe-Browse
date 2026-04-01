@@ -19,36 +19,27 @@ It combines:
 ---
 
 ## Project Structure
+
+```text
 phishing-detection-project/
-
-|
 ├── backend/
-|   ├── app.py
-|   ├── utils.py
-
-|   ├── phishing_model.pkl
-|   ├── scaler.pkl (optional)
-|   └── requirements.txt
-
-|
+│   ├── app.py
+│   └── utils.py
 ├── frontend/
-|   ├── index.html
-|   ├── login.html
-
-|   ├── style.css
-|   ├── script.js
-|   └── SafeBrowse.png
-
-|
+│   ├── index.html
+│   └── login.html
 ├── ml_model/
-|   ├── train_model.py
-|   ├── train_custom.py
+│   ├── train_model.py
+│   └── train_custom.py
+├── dataset.csv
+├── phishing_model.pkl
+├── README.md
+├── requirements.txt
+├── SafeBrowse.png
+├── scaler.pkl (optional)
+├── script.js
+└── style.css
 
-|   └── dataset.csv
-|
-└── README.md
-
----
 
 ## ⚙️ Installation & Setup
 
